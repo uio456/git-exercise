@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  def is_admin?
-    Rails.env.development?
+
+  def admin?
+    self.id == 1 || Rails.env.devalopment?
   end
 end
